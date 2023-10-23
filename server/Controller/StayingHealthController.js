@@ -36,17 +36,20 @@ const deleteStayingHealth=async(req,res)=>{
         }
     })
 }
-// const update=async(req,res)=>{
-//     const id=req.params.id;
-//     const {colname,colname,colname}=req.body
-//     const sqlUpdate='UPDATE tablename SET colname = ? WHERE id = ?';
-//     db.query(sqlUpdate,[colname,colname],(err,result)=>{
-//         if(err){
-//             console.log(err)
-//         }
-//         else{
-//             console.log(result)
-//         }
-//     })
-// }
+const update=async(req,res)=>{
+    const id=req.params.id;
+    const colname=req.body.colname
+    const colname1=req.body.colname
+    //OR
+    // const {colname,colname,colname}=req.body
+    const sqlUpdate='UPDATE tablename SET colname = ? WHERE id = ?';
+    db.query(sqlUpdate,[colname,colname1],(err,result)=>{
+        if(err){
+            console.log(err)
+        }
+        else{
+            console.log(result)
+        }
+    })
+}
 module.exports={add,get,deleteStayingHealth,update}

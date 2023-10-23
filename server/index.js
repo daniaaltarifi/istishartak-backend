@@ -1,5 +1,6 @@
 const express=require('express');
 const app=express();
+const db=require('./config/config')
 const bodyParser=require('body-parser');
 const mysql2=require('mysql2')
 const cors=require('cors')
@@ -9,6 +10,7 @@ const path=require("path");
 const dotenv=require('dotenv')
 dotenv.config(".env");
 const PORT=process.env.PORT
+// db()
 app.use(express.json());
 app.use(cors())
 app.use(bodyParser.json())
