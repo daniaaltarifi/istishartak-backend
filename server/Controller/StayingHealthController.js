@@ -9,6 +9,7 @@ db.query(sqlInsert,[colname,colname],(err,result)=>{
     }
     else{
         console.log(result)
+        res.json(result)
     }
 })
 }
