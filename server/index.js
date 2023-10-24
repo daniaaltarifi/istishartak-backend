@@ -42,6 +42,24 @@ db.query(sql,[image],(err,result)=>{
 return res.json({Status:"succses"})
 })
 })
+
+// post request for add data and img in the same time
+
+// app.post('/addDataAndImage', upload.single('image'), (req, res) => {
+//     const { colname1, colname2 } = req.body;
+//     const image = req.file.filename;
+
+//     // Insert the user's data and image into the database.
+//     const sqlInsert = "INSERT INTO tablename (colname1, colname2, image) VALUES (?, ?, ?)";
+//     db.query(sqlInsert, [colname1, colname2, image], (err, result) => {
+//         if (err) {
+//             console.error('Error inserting data: ' + err.message);
+//             return res.json({ message: "Error" });
+//         }
+//         return res.json({ status: "success" });
+//     });
+// });
+
 app.get('/getimage',(req,res)=>{
     const sql='select * from users';
     db.query(sql,(err,result)=>{
